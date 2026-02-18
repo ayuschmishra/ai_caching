@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ai-cache
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDM1ODVAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.VvRJOqWp0BZhZHfyToTQqwvO3vLooUoTvELR4umlndk
+        sync: false
